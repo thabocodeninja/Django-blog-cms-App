@@ -1,0 +1,172 @@
+          {% extends 'base_layout.html' %}   
+          {% block content %} 
+            </header>
+            <!-- header end -->
+            <!-- wrapper  -->	
+            <div id="wrapper">
+                <!-- content -->	
+                <div class="content">
+                    <!-- column-image  -->	
+                    <div class="column-image">
+                        <div class="bg"  data-bg="images/bg/22.jpg"></div>
+                        <div class="overlay"></div>
+                        <div class="column-title">
+                            <h2>My Stories</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</h3>
+                        </div>
+                        <div class="column-notifer">
+                            <div class="scroll-down-wrap transparent_sdw">
+                                <div class="mousey">
+                                    <div class="scroller"></div>
+                                </div>
+                                <span>Scroll down  to Discover</span>
+                            </div>
+                        </div>
+                        <div class="fixed-column-dec"></div>
+                    </div>
+                    <!-- column-image end  -->	
+                    <!-- column-wrapper -->	
+                    <div class="column-wrapper  single-content-section">
+                        <!-- fixed-bottom-content-->	
+                        <div class="fixed-bottom-content">
+                            <!-- pagination   -->
+                            <div class="pagination-container fl-wrap">
+                                <a href="#" class="prevposts-link"><i class="fal fa-chevron-left"></i></a>
+                                <a href="#">1</a>
+                                <a href="#" class="current-page">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#" class="nextposts-link"><i class="fal fa-chevron-right"></i></a>
+                            </div>
+                            <!-- pagination  end -->
+                        </div>
+                        <!-- fixed-bottom-content end -->	
+                        <!--section  -->	
+                        <section class="single-content-section">
+                               
+                            <div class="container small-container">
+                                <!-- post -->  
+                                <div class="post fl-wrap fw-post">
+                                    {% for blog in blog %}
+                                    <h2><a href="#">{{blog.title}}</a></h2>
+                                    <h2><span></span></h2>
+                                    <ul class="blog-title-opt">
+                                        <li><a href="#">{{blog.date}}</a></li>
+                                        <li> - </li>
+                                        <li><a href="#">Interviews </a></li>
+                                        <li><a href="#">Design</a></li>
+                                    </ul>
+                                    <!-- blog media -->
+                                    <div class="blog-media fl-wrap">
+                                        <img src="images/folio/5.jpg" class="respimg" alt="">
+                                    </div>
+                                    <!-- blog media end -->
+                                    <div class="blog-text fl-wrap">
+                                        <div class="pr-tags fl-wrap">
+                                            <span>Tags : </span>
+                                            <ul>
+                                                <li><a href="#">Design</a></li>
+                                                <li><a href="#">Photography</a></li>
+                                                <li><a href="#">Fasion</a></li>
+                                            </ul>
+                                        </div>
+                                        <p>
+                                            {{blog.snipped}}   
+                                        </p>
+                                        <a href="blog-single.html" class="btn float-btn flat-btn">Read morethabo </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <!-- post end-->
+                                
+                            </div>
+                          
+                        </section>
+                     
+                        <!--section end  -->	
+                        <!--footer -->			
+                        <footer class="min-footer fl-wrap content-animvisible">
+                            <div class="container small-container">
+                                <div class="footer-inner fl-wrap">
+                                    <!-- policy-box-->
+                                    <div class="policy-box">
+                                        <span>&#169; stylesbylethabo 2019  /  All rights reserved. </span>
+                                    </div>
+                                    <!-- policy-box end-->
+                                    <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
+                                </div>
+                            </div>
+                        </footer>
+                        <!--footer end  -->	
+                    </div>
+                    <!-- column-wrapper -->	
+                </div>
+                <!--content end-->	
+                <!--share-wrapper-->
+                <div class="share-wrapper">
+                    <div class="share-container fl-wrap  isShare"></div>
+                </div>
+                <!--share-wrapper end-->
+            </div>
+            <!-- wrapper end -->
+            <!-- sidebar -->
+            <div class="sb-overlay"></div>
+            <div class="hiiden-sidebar-wrap outsb">
+                <!-- sb-widget-wrap-->
+                <div class="sb-widget-wrap fl-wrap">
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <div class="sb-widget  fl-wrap">
+                        <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet,  </p>
+                        <div class="subcribe-form fl-wrap">
+                            <form id="subscribe">
+                                <input class="enteremail" name="email" id="subscribe-email" placeholder="Your Email" spellcheck="false" type="text">
+                                <button type="submit" id="subscribe-button" class="subscribe-button">Submit</button>
+                                <label for="subscribe-email" class="subscribe-message"></label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- sb-widget-wrap end--> 
+                <!-- sb-widget-wrap-->
+                <div class="sb-widget-wrap fl-wrap">
+                    <h3>Instagram Photos</h3>
+                    <div class="sb-widget fl-wrap">
+                        <div class='jr-insta-thumb' id="insta-content" data-instatoken="3075034521.5d9aa6a.284ff8339f694dbfac8f265bf3e93c8a">
+                        </div>
+                    </div>
+                </div>
+                <!-- sb-widget-wrap end--> 
+                <!-- sb-widget-wrap-->
+                <div class="sb-widget-wrap fl-wrap">
+                    <h3>We're Are Social</h3>
+                    <div class="sb-widget    fl-wrap">
+                        <div class="sidebar-social fl-wrap">
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- sb-widget-wrap end-->                                   
+                <!-- sb-widget-wrap-->
+                <div class="sb-widget-wrap fl-wrap">
+                    <h3>Our Last Twitts</h3>
+                    <div class="sb-widget  fl-wrap">
+                        <div id="footer-twiit"></div>
+                        <a href="#" target="_blank" class="twitt_btn fl-wrap">Follow Us</a>
+                    </div>
+                </div>
+                <!-- sb-widget-wrap end-->    
+            </div>
+            <!-- sidebar end -->
+            <!-- cursor-->
+            <div class="element">
+                <div class="element-item"></div>
+            </div>
+            <!-- cursor end-->          
+        </div>
+        <!-- Main end -->
+    {% endblock %}

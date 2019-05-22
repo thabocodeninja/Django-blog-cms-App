@@ -1,0 +1,102 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <!-- content -->	
+    <div class="content">
+            <!-- column-image  -->	
+            <div class="column-image">
+                <div class="bg"  data-bg="images/bg/20.jpg"></div>
+                <div class="overlay"></div>
+                <div class="column-title">
+                    <h2>My Stories</h2>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</h3>
+                </div>
+                <div class="column-notifer">
+                    <div class="scroll-down-wrap transparent_sdw">
+                        <div class="mousey">
+                            <div class="scroller"></div>
+                        </div>
+                        <span>Scroll down  to Discover</span>
+                    </div>
+                </div>
+                <div class="fixed-column-dec"></div>
+            </div>
+            <!-- column-image end  -->	
+            <!-- column-wrapper -->	
+            <div class="column-wrapper single-content-section">
+                <!--fixed-bottom-content -->	
+                <div class="fixed-bottom-content">
+                    <!-- pagination   -->
+                    <div class="content-nav-fixed">
+                        <ul>
+                            <li>
+                                <a href="blog-single.html" class="ln"><i class="fal fa-long-arrow-left"></i><span>Prev <strong>- Post Title</strong></span></a>
+                                <div class="content-nav_mediatooltip cnmd_leftside"><img  src="images/folio/6.jpg"   alt=""></div>
+                            </li>
+                            <li>
+                                <a href="blog-single.html" class="rn"><span >Next <strong>- Post Title</strong></span> <i class="fal fa-long-arrow-right"></i></a>
+                                <div class="content-nav_mediatooltip cnmd_rightside"><img  src="images/folio/5.jpg"   alt=""></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--fixed-bottom-content end  -->	
+                <!--section  -->	
+                 <section class="single-content-section">
+                    <div class="container small-container">
+                        <!-- post -->
+                        <div class="post fl-wrap fw-post single-post ">
+
+                            <!-- blog media end -->
+                            <div class="blog-text fl-wrap">
+                             <div class="sb-widget-wrap fl-wrap">
+                            <h3>Sign Up Form</h3>
+                            <div class="sb-widget  fl-wrap">
+                                <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet,  </p>
+                                <div class="subcribe-form fl-wrap">
+                                    <form id="subscribe" method="post" action="/accounts/signup">
+                                        {{form}}
+                                        <button>submit</button>
+                                        <input class="enteremail" name="email" id="subscribe-email" placeholder="Your Email" spellcheck="false" type="text">
+                                       <br>
+                                       <br>
+                                        <input class="password" style="background-color: none;
+                                        border: 1px solid #e4e4e4;
+                                        font-size: 12px;
+                                        height: 55px;
+                                        padding: 0 20px;
+                                        width: 100%;
+                                        outline: none;" name="password" id="password" placeholder="Your Password" spellcheck="false" type="text">
+                                        <button type="submit" id="subscribe-button" class="subscribe-button">Submit</button>
+                                        <label for="subscribe-email" class="subscribe-message"></label>
+                                    </form>
+                                </div>
+                             </div>
+                             </div>
+                             
+                            </div>
+                            <!-- post-author-->                                   
+                          
+                        </div>
+                        <!-- post end-->
+                    </div>
+                </section>
+                <!--section end  -->	
+                <!--footer -->			
+                <footer class="min-footer fl-wrap content-animvisible">
+                    <div class="container small-container">
+                        <div class="footer-inner fl-wrap">
+                            <!-- policy-box-->
+                            <div class="policy-box">
+                                <span>&#169; stylesbythabo 2019  /  All rights reserved. </span>
+                            </div>
+                            <!-- policy-box end-->
+                            <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
+                        </div>
+                    </div>
+                </footer>
+                <!--footer end  -->	
+            </div>
+            <!-- column-wrapper -->	
+        </div>
+{% endblock %}

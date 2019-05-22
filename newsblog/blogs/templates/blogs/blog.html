@@ -1,0 +1,68 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="content full-height">
+            <!-- media-container  -->
+            <div class="media-container">
+                <!--fs-slider-wrap -->						
+                <div class="fs-slider-wrap fs-slider-det full-height fl-wrap">
+                    <div class="fs-slider lightgallery full-height fl-wrap" data-mousecontrol2="true">
+                        <div class="swiper-container  ">
+                            <div class="swiper-wrapper" >
+                                {% for blog in blog %}
+                                     <!-- swiper-slide-->
+                                <div class="swiper-slide hov_zoom" data-fsslideropt1="Location : <span>Switzerland , Bern</span>" data-fsslideropt2="Photos : <span>27 Photos</span>"
+                                     data-fsslideropt3="Camera : <span>Canon EOS R</span>" data-fssurl="news.html">
+                                    <div class="fs-slider-item fl-wrap">
+                                        <div class="bg"  data-bg="http://127.0.0.1:8000/static/bg/1.jpg"></div>
+                                        <div class="overlay"></div>
+                                        <div class="fs-slider_align_title">
+                                            <h2><a href="">{{blog.title}}</a></h2>
+                                            <p>{{blog.snipped}} </p>
+                                            <p>{{blog.date}}</p>
+                                            <div class="clearfix"></div>
+                                            <a href="{% url 'detail' slug=blog.slug%}" class="btn fl-btn">Details</a>
+                                        </div>
+                                        <a href="http://127.0.0.1:8000/static/bg/25.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                                   
+                                    </div>
+                                </div>
+                                <!-- swiper-slide-->
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--fs-slider-wrap end -->	
+                <div class="hero-slider-wrap_pagination hlaf-slider-pag"></div>
+                <!-- hero-slider_details_wrap--> 
+                <div class="hero-slider_details_wrap">
+                    <div class="hero-slider_details fl-wrap">
+                        <ul>
+                            <li class="opt-one"></li>
+                            <li class="opt-two"></li>
+                            <li class="opt-three"></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="hero-slider_details_url ajax"><i class="fal fa-chevron-right"></i></a>
+                </div>
+                <!-- hero-slider_details_wrap  end --> 
+                <!-- hero-slider_control-wrap--> 
+                <div class="hero-slider_control-wrap dark-gradient">
+                    <div class="scroll-down-wrap transparent_sdw">
+                        <div class="mousey">
+                            <div class="scroller"></div>
+                        </div>
+                        <span>Scroll down or  Swipe</span>
+                    </div>
+                    <div class="hero-slider_control_item">
+                        <div class="hero-slider_control hero-slider-button-prev"><i class="fal fa-angle-left"></i></div>
+                        <div class="hero-slider_control hero-slider-button-next"><i class="fal fa-angle-right"></i></div>
+                    </div>
+                </div>
+                <!-- hero-slider_control-wrap end--> 
+            </div>
+            <!-- media-container   end -->         
+            {% include "slider_counter.html" %}
+        </div>
+        {% endblock %}
